@@ -1,0 +1,10 @@
+Datos
+
+Persona:
++Idenntificacion
++Nombre
++Fecha Nacimiento
++Celular
++Direccion
++Correo
++contraseña
