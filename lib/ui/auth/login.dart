@@ -1,6 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mediplus_proyecto/domain/modelo/persona.dart';
+import 'package:mediplus_proyecto/ui/pages/inicio.dart';
 import 'package:mediplus_proyecto/ui/widgets.dart';
 import 'register.dart';
 
@@ -12,6 +15,12 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  final List<Persona> _persona = listPersona;
+
+  TextEditingController controlCorreo = TextEditingController();
+  TextEditingController controlContrasena = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -39,11 +48,12 @@ class _LoginState extends State<Login> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
 
-                    const SizedBox(width: 30.0),
-
-                    const CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage("https://play-lh.googleusercontent.com/vDkXZh8BPbgvhfghlrDPMSN9CpXIszJuyMVkPm01UG2pj81XZEkwpXVqycdTgacxhg"),                    
+                    Container(
+                      margin: const EdgeInsets.only(top: 50),
+                      child: const CircleAvatar(
+                        radius: 50,
+                        backgroundImage: NetworkImage("https://play-lh.googleusercontent.com/vDkXZh8BPbgvhfghlrDPMSN9CpXIszJuyMVkPm01UG2pj81XZEkwpXVqycdTgacxhg"),
+                      ),
                     ),
 
                     Container(
@@ -60,21 +70,21 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
-
-            const SizedBox(width: 30.0),
             
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlCorreo,
               textos: 'Ingresar Correo', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.email,
                 color: Color.fromARGB(255, 2, 147, 29)
               ),
             ),
 
-           const TextsRegister(
+           TextsRegister(
+            gestionTextos: controlContrasena,
               obscureText: true,
               textos: 'Ingresar Contraseña', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.vpn_key,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
@@ -91,7 +101,7 @@ class _LoginState extends State<Login> {
 
             GestureDetector(
               onTap: () => {
-                
+                iniciarSeccion(context)
               },
               child: Container(
                 margin: const EdgeInsets.only(left: 20, right: 20, top: 60),
@@ -146,5 +156,29 @@ class _LoginState extends State<Login> {
         ),
       )
     );
+  }
+
+  iniciarSeccion(context) {
+    var valid = _persona.firstWhere(
+      (p) => p.correo == controlCorreo.text && p.contrasena == controlContrasena.text, orElse: () => Persona());
+    
+    if(valid.correo != null){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const Inicio()));
+      showDialog(
+        context: context, 
+        builder: (_) => const AlertDialog(
+          title: Text('MediPlus'),
+          content: Text('Bienvenid@'),
+        )
+      );
+    }else{
+      showDialog(
+        context: context, 
+        builder: (_) => const AlertDialog(
+          title: Text('MediPlus'),
+          content: Text('Correo o Contraseña Incorrectos'),
+        )
+      );
+    }
   }
 }

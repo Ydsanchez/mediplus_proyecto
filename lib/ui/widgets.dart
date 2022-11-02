@@ -5,12 +5,14 @@ import 'package:get/get.dart';
 
 class TextsRegister extends StatelessWidget {
 
+  final TextEditingController gestionTextos;
   final String textos;
   final Icon iconos;
   final bool obscureText;
 
   const TextsRegister({
     Key? key,
+    required this.gestionTextos,
     this.obscureText = false,
     required this.iconos,
     required this.textos,
@@ -32,6 +34,7 @@ class TextsRegister extends StatelessWidget {
       ),
       alignment: Alignment.center,
       child: TextField(
+        controller: gestionTextos,
         obscureText: obscureText,
         cursorColor: const Color.fromARGB(255, 2, 147, 29),
         decoration: InputDecoration(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mediplus_proyecto/ui/widgets.dart';
 
+import '../../domain/modelo/persona.dart';
+
 class Register extends StatefulWidget {
   const Register({super.key});
 
@@ -9,6 +11,16 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+
+  final List<Persona> _addPersona = [];
+
+  TextEditingController controlIdentificacion = TextEditingController();
+  TextEditingController controlNombre = TextEditingController();
+  TextEditingController controlFecNac = TextEditingController();
+  TextEditingController controlCelular = TextEditingController();
+  TextEditingController controlDireccion = TextEditingController();
+  TextEditingController controlCorreo = TextEditingController();
+  TextEditingController controlContrasena = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -59,17 +71,19 @@ class _RegisterState extends State<Register> {
               ),
             ),
             
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlIdentificacion,
               textos: 'Identificacion', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.perm_identity,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
             ),
 
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlNombre,
               textos: 'Nombre Completo', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.person_add,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
@@ -77,37 +91,71 @@ class _RegisterState extends State<Register> {
 
             //Fecha Nacimiento
 
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlCelular,
               textos: 'Celular', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.call,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
             ),
 
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlDireccion,
               textos: 'Direccion', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.map,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
             ),
 
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlCorreo,
               textos: 'Correo', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.email,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
             ),
 
-            const TextsRegister(
+            TextsRegister(
+              gestionTextos: controlContrasena,
               obscureText: true,
               textos: 'Contraseña', 
-              iconos: Icon(
+              iconos: const Icon(
                 Icons.vpn_key,
                 color: Color.fromARGB(255, 2, 147, 29)
               )
+            ),
+
+            GestureDetector(
+              onTap: () => {
+                
+              },
+              child: Container(
+                margin: const EdgeInsets.only(left: 20, right: 20, top: 60),
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                alignment: Alignment.center,
+                height: 54,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [(Color.fromARGB(255, 2, 147, 29)), (Color.fromARGB(255, 1, 55, 11))],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(50),
+                  boxShadow: const [BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE)
+                  )],
+                ),
+                child: const Text("Registrar",
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
+                ),
+              ),
             ),
           ],
         ),
