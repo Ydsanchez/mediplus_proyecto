@@ -72,6 +72,7 @@ class _LoginState extends State<Login> {
             ),
             
             TextsRegister(
+              top: 70,
               gestionTextos: controlCorreo,
               textos: 'Ingresar Correo', 
               iconos: const Icon(
@@ -81,6 +82,7 @@ class _LoginState extends State<Login> {
             ),
 
            TextsRegister(
+            top: 20,
             gestionTextos: controlContrasena,
               obscureText: true,
               textos: 'Ingresar Contraseña', 

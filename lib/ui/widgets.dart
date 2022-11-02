@@ -1,7 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class TextsRegister extends StatelessWidget {
 
@@ -9,9 +8,11 @@ class TextsRegister extends StatelessWidget {
   final String textos;
   final Icon iconos;
   final bool obscureText;
+  final double top;
 
   const TextsRegister({
     Key? key,
+    required this.top,
     required this.gestionTextos,
     this.obscureText = false,
     required this.iconos,
@@ -21,7 +22,7 @@ class TextsRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin:const EdgeInsets.only(left: 20, right: 20, top: 20),
+      margin: EdgeInsets.only(left: 20, right: 20, top: top),
       padding: const EdgeInsets.only(left: 20, right: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),

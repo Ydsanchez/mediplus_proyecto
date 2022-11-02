@@ -72,6 +72,7 @@ class _RegisterState extends State<Register> {
             ),
             
             TextsRegister(
+              top: 70,
               gestionTextos: controlIdentificacion,
               textos: 'Identificacion', 
               iconos: const Icon(
@@ -81,6 +82,7 @@ class _RegisterState extends State<Register> {
             ),
 
             TextsRegister(
+              top: 20,
               gestionTextos: controlNombre,
               textos: 'Nombre Completo', 
               iconos: const Icon(
@@ -92,6 +94,7 @@ class _RegisterState extends State<Register> {
             //Fecha Nacimiento
 
             TextsRegister(
+              top: 20,
               gestionTextos: controlCelular,
               textos: 'Celular', 
               iconos: const Icon(
@@ -101,6 +104,7 @@ class _RegisterState extends State<Register> {
             ),
 
             TextsRegister(
+              top: 20,
               gestionTextos: controlDireccion,
               textos: 'Direccion', 
               iconos: const Icon(
@@ -110,6 +114,7 @@ class _RegisterState extends State<Register> {
             ),
 
             TextsRegister(
+              top: 20,
               gestionTextos: controlCorreo,
               textos: 'Correo', 
               iconos: const Icon(
@@ -119,6 +124,7 @@ class _RegisterState extends State<Register> {
             ),
 
             TextsRegister(
+              top: 20,
               gestionTextos: controlContrasena,
               obscureText: true,
               textos: 'Contraseña', 
