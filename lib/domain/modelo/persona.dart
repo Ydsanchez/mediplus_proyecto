@@ -27,5 +27,15 @@ List<Persona> listPersona = [
     direccion: 'mz 9 cs 24',
     correo: 'yd@gmail.com',
     contrasena: '1001'
+  ),
+
+  Persona(
+    identificacion: '0000',
+    nombre: 'David',
+    fechaNac: DateTime(1994, 05, 23),
+    celular: '300',
+    direccion: 'mz 9 cs 24',
+    correo: 'MediPlus@gmail.com',
+    contrasena: '0123'
   )
 ];

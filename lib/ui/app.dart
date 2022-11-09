@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mediplus_proyecto/ui/auth/login.dart';
 import 'package:mediplus_proyecto/ui/auth/principal.dart';
-import 'package:mediplus_proyecto/ui/pages/inicio.dart';
+import 'package:mediplus_proyecto/ui/pages/inicioAdministrativo.dart';
+import 'package:mediplus_proyecto/ui/pages/inicioCliente.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -13,7 +14,7 @@ class App extends StatelessWidget {
       title: 'MediPlus',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const Inicio(),
+      home: const inicioAdministrativo(),
     );
   }
 }

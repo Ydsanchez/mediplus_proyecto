@@ -1,9 +1,12 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mediplus_proyecto/domain/modelo/persona.dart';
-import 'package:mediplus_proyecto/ui/pages/inicio.dart';
+import 'package:mediplus_proyecto/ui/pages/inicioAdministrativo.dart';
+import 'package:mediplus_proyecto/ui/pages/inicioCliente.dart';
 import 'package:mediplus_proyecto/ui/widgets.dart';
 import 'register.dart';
 
@@ -163,7 +166,10 @@ class _LoginState extends State<Login> {
   iniciarSeccion(context) {
     var valid = _persona.firstWhere(
       (p) => p.correo == controlCorreo.text && p.contrasena == controlContrasena.text, orElse: () => Persona());
-    
+
+    //Validar los datos del administrativo y cliente suminstrado en la lista del archivo persona.dart 
+    //y que envie a su interface de inicioAdminstrativo.dart y inicioCliente.dart correspondiente
+
     if(valid.correo != null){
       Navigator.push(context, MaterialPageRoute(builder: (context) => const Inicio()));
       showDialog(
