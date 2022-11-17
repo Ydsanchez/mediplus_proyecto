@@ -143,12 +143,12 @@ class _inicioAdministrativoState extends State<inicioAdministrativo> {
               crossAxisCount: 2,
               padding: const EdgeInsets.all(2),
               children: [
-                makeDashBoardItem("Perfil", "imagenes/usuario.png", 0),
-                makeDashBoardItem("Medicinas", "imagenes/medicina.png", 1),
-                makeDashBoardItem("Carrito", "imagenes/carrito-de-compras (1).png", 2),
-                makeDashBoardItem("Factura", "imagenes/factura.png", 3),
-                makeDashBoardItem("Pedidos", "imagenes/pedido-en-linea.png", 4),
-                makeDashBoardItem("Almacenamiento", "imagenes/valores.png", 5),
+                makeDashBoardItem("Perfil", "assets/icons/usuario.png", 0),
+                makeDashBoardItem("Medicinas", "assets/icons/medicina.png", 1),
+                makeDashBoardItem("Carrito", "assets/icons/carrito-de-compras (1).png", 2),
+                makeDashBoardItem("Factura", "assets/icons/factura.png", 3),
+                makeDashBoardItem("Pedidos", "assets/icons/pedido-en-linea.png", 4),
+                makeDashBoardItem("Almacenamiento", "assets/icons/valores.png", 5),
               ],
             ),
           )

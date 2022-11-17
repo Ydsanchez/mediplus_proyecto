@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       title: 'MediPlus',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const inicioAdministrativo(),
+      home: const Bienvenidos(),
     );
   }
 }
