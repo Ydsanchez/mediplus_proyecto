@@ -1,14 +1,15 @@
+// ignore_for_file: camel_case_types, file_names
+
 import 'package:flutter/material.dart';
 
-class Inicio extends StatefulWidget {
-  const Inicio({super.key});
+class inicioAdministrativo extends StatefulWidget {
+  const inicioAdministrativo({super.key});
 
   @override
-  State<Inicio> createState() => _InicioState();
+  State<inicioAdministrativo> createState() => _inicioAdministrativoState();
 }
 
-class _InicioState extends State<Inicio> {
-
+class _inicioAdministrativoState extends State<inicioAdministrativo> {
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -51,6 +52,14 @@ class _InicioState extends State<Inicio> {
 
             if (index==3) {
               //item: Facturas
+            }
+
+            if (index==4) {
+              //item: Pedidos
+            }
+
+            if (index==5) {
+              //item: Alamacenamiento
             }
           },
 
@@ -138,6 +147,8 @@ class _InicioState extends State<Inicio> {
                 makeDashBoardItem("Medicinas", "assets/icons/medicina.png", 1),
                 makeDashBoardItem("Carrito", "assets/icons/carrito-de-compras (1).png", 2),
                 makeDashBoardItem("Factura", "assets/icons/factura.png", 3),
+                makeDashBoardItem("Pedidos", "assets/icons/pedido-en-linea.png", 4),
+                makeDashBoardItem("Almacenamiento", "assets/icons/valores.png", 5),
               ],
             ),
           )

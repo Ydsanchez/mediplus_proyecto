@@ -1,15 +1,17 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:mediplus_proyecto/ui/pages/Medicamentos/medicamentosUI.dart';
 
-class inicioAdministrativo extends StatefulWidget {
-  const inicioAdministrativo({super.key});
+class Inicio extends StatefulWidget {
+  const Inicio({super.key});
 
   @override
-  State<inicioAdministrativo> createState() => _inicioAdministrativoState();
+  State<Inicio> createState() => _InicioState();
 }
 
-class _inicioAdministrativoState extends State<inicioAdministrativo> {
+class _InicioState extends State<Inicio> {
+
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -43,7 +45,7 @@ class _inicioAdministrativoState extends State<inicioAdministrativo> {
             }
 
             if (index==1) {
-              //item: Produtos
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MedicamentosUI()));
             }
 
             if (index==2) {
@@ -52,14 +54,6 @@ class _inicioAdministrativoState extends State<inicioAdministrativo> {
 
             if (index==3) {
               //item: Facturas
-            }
-
-            if (index==4) {
-              //item: Pedidos
-            }
-
-            if (index==5) {
-              //item: Alamacenamiento
             }
           },
 
@@ -147,8 +141,6 @@ class _inicioAdministrativoState extends State<inicioAdministrativo> {
                 makeDashBoardItem("Medicinas", "assets/icons/medicina.png", 1),
                 makeDashBoardItem("Carrito", "assets/icons/carrito-de-compras (1).png", 2),
                 makeDashBoardItem("Factura", "assets/icons/factura.png", 3),
-                makeDashBoardItem("Pedidos", "assets/icons/pedido-en-linea.png", 4),
-                makeDashBoardItem("Almacenamiento", "assets/icons/valores.png", 5),
               ],
             ),
           )

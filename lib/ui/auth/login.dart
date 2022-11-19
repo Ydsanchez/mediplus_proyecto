@@ -1,12 +1,12 @@
-// ignore_for_file: unnecessary_null_comparison
+// ignore_for_file: unnecessary_null_comparison, unnecessary_import, unused_import
 
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mediplus_proyecto/domain/modelo/persona.dart';
-import 'package:mediplus_proyecto/ui/pages/inicioAdministrativo.dart';
-import 'package:mediplus_proyecto/ui/pages/inicioCliente.dart';
+import 'package:mediplus_proyecto/ui/pages/Administrativo/inicioAdministrativo.dart';
+import 'package:mediplus_proyecto/ui/pages/Cliente/inicioCliente.dart';
 import 'package:mediplus_proyecto/ui/widgets.dart';
 import 'register.dart';
 

@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, unused_import, prefer_const_constructors, unnecessary_new
+
 import 'dart:async';
 import 'dart:ui';
 
@@ -16,6 +18,7 @@ class _BienvenidosState extends State<Bienvenidos> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     startTimer();
